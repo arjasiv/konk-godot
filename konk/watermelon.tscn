@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://t1l3gsruiil8"]
+
+[ext_resource type="Script" uid="uid://bfm6o2bku88yl" path="res://watermelon.gd" id="1_6apsg"]
+[ext_resource type="Texture2D" uid="uid://b0xm74p0wohsq" path="res://Melon.png" id="1_pj8vt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6apsg"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35wkn"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dopjt"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2w30"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt24h"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1bca"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fd0fy"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ux21"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw56h"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6moh"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpwjl"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_254ux"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkct6"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihlfa"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vdvm"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og67h"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3b21"]
+atlas = ExtResource("1_pj8vt")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7lcnv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6apsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35wkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dopjt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2w30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt24h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1bca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fd0fy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ux21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xw56h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6moh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpwjl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_254ux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkct6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihlfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vdvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_og67h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3b21")
+}],
+"loop": 1,
+"name": &"watermelon",
+"speed": 16.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_64ps4"]
+radius = 8.0
+height = 20.0
+
+[node name="Watermelon" type="Area2D" unique_id=1726715606]
+collision_mask = 2
+script = ExtResource("1_6apsg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=740846905]
+sprite_frames = SubResource("SpriteFrames_7lcnv")
+animation = &"watermelon"
+autoplay = "watermelon"
+frame_progress = 0.74998635
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=753211345]
+position = Vector2(0, -1)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_64ps4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
